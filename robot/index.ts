@@ -20,8 +20,7 @@ function setup() {
     circle(300,100,50)
 
 
-
-
+    rect(200,450,200,50)
 
 
 
