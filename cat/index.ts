@@ -16,7 +16,7 @@ function setup() {
     fill("grey")
     triangle(170,200,200,100,220,160)
 
-    triangle(380,160,400,100,440,200)
+    triangle(380,160,400,100,440,205)
 
 
     fill("pink")
