@@ -26,14 +26,16 @@ function setup() {
   const KreisY = height * 0.1
   const KreisD = headHeight * 0.1
 
+  fill("white")
   circle(KreisX, KreisY, KreisD)
 
   //Auge Links
-  const LAugeX = headHeight *0.125
-  const LAuge
-  const LAugeD
+  const LAugeX = width *0.375
+  const LAugeY = height *0.375
+  const LAugeD = headHeight * 0.2
 
-
+  fill("black")
+  circle(LAugeX,LAugeY,LAugeD)
 
 
 
