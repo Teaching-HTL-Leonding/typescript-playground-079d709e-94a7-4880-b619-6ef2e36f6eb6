@@ -37,6 +37,20 @@ function setup() {
   fill("black")
   circle(LAugeX,LAugeY,LAugeD)
 
+  //Auge Rechts
+  const RAugeX = width *0.625
+  const RAugeY = height *0.375
+  const RAugeD = headHeight * 0.2
+
+  circle(RAugeX, RAugeY, RAugeD)
+
+  //Mund
+  const MundX = width * 0.375
+  const MundY = height * 0.6
+  const MundX2 = width * 0.25
+  const MundY2 = height * 0.05
 
 
+  fill("white")
+  rect(MundX, MundY, MundX2, MundY2)
 }
