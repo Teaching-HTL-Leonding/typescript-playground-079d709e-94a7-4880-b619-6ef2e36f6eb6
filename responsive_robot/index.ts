@@ -67,4 +67,15 @@ function setup() {
 
   rect(RBeinX, BeinY, RBeinX2, BeinY2)
 
+  //Linker Arm
+  const LArmX = 
+  const ArmY = 
+  const LArmX2 = 
+  const ArmY2 = 
+
+
+
+
+
+
 }
