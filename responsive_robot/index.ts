@@ -30,19 +30,18 @@ function setup() {
   circle(KreisX, KreisY, KreisD)
 
   //Auge Links
-  const LAugeX = width *0.375
-  const LAugeY = height *0.375
-  const LAugeD = headHeight * 0.2
+  const LAugeX = headX + headWidth * 0.25
+  const AugeY = headY + headHeight * 0.25
+  const LAugeD = min(headWidth, headHeight) * 0.2
 
   fill("black")
-  circle(LAugeX,LAugeY,LAugeD)
+  circle(LAugeX, AugeY, LAugeD)
 
   //Auge Rechts
-  const RAugeX = width *0.625
-  const RAugeY = height *0.375
-  const RAugeD = headHeight * 0.2
+  const RAugeX = headX + headWidth * 0.75
+  const RAugeD = min(headWidth, headHeight) * 0.2
 
-  circle(RAugeX, RAugeY, RAugeD)
+  circle(RAugeX, AugeY, RAugeD)
 
   //Mund
   const MundX = width * 0.375
