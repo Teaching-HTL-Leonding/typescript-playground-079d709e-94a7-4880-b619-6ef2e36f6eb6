@@ -32,16 +32,15 @@ function setup() {
   //Auge Links
   const LAugeX = headX + headWidth * 0.25
   const AugeY = headY + headHeight * 0.25
-  const LAugeD = min(headWidth, headHeight) * 0.2
+  const AugeD = min(headWidth, headHeight) * 0.2
 
   fill("black")
-  circle(LAugeX, AugeY, LAugeD)
+  circle(LAugeX, AugeY, AugeD)
 
   //Auge Rechts
   const RAugeX = headX + headWidth * 0.75
-  const RAugeD = min(headWidth, headHeight) * 0.2
 
-  circle(RAugeX, AugeY, RAugeD)
+  circle(RAugeX, AugeY, AugeD)
 
   //Mund
   const MundX = width * 0.375
@@ -52,4 +51,20 @@ function setup() {
 
   fill("white")
   rect(MundX, MundY, MundX2, MundY2)
+
+  //Linkes Bein
+  fill("grey")
+  const LBeinX = headWidth * 0.65
+  const BeinY = headHeight * 1.5
+  const LBeinX2 = headWidth * 0.20
+  const BeinY2 = headHeight * 0.45
+
+  rect(LBeinX, BeinY, LBeinX2, BeinY2)
+
+  //Rechtes Bein
+  const RBeinX = headWidth * 1.15
+  const RBeinX2 = headWidth * 0.20
+
+  rect(RBeinX, BeinY, RBeinX2, BeinY2)
+
 }
