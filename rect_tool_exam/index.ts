@@ -11,8 +11,8 @@ function mouseMoved() {
     const snap = 10
     const markerSize = 10
 
-    const x = Math.round(mouseX / snap) * snap;
-    const y = Math.round(mouseY / snap) * snap;
+    const x = Math.round(mouseX / snap) * snap
+    const y = Math.round(mouseY / snap) * snap
 
     const höhe = Math.round((100 - y) * 2)
     const breite = Math.round((200 - x) * 2)
@@ -43,7 +43,7 @@ function mouseMoved() {
     const area = Math.round((höhe) * (breite))
     text(`area: ${area}`, 5, height - 10);
 
-    text(`  ${breite}`, x + (200 - x)-20, y - 5);
+    text(`  ${breite}`, x + (200 - x)-20, y - 5)
 
-    text(`  ${höhe}`, x - 30, y + (100 - y));
+    text(`  ${höhe}`, x - 30, y + (100 - y))
 }
