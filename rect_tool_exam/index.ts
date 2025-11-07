@@ -43,7 +43,7 @@ function mouseMoved() {
     const area = Math.round((höhe) * (breite))
     text(`area: ${area}`, 5, height - 10);
 
-    text(`  ${breite}`, x + (200 - x), y - 5);
+    text(`  ${breite}`, x + (200 - x)-20, y - 5);
 
     text(`  ${höhe}`, x - 30, y + (100 - y));
 }
