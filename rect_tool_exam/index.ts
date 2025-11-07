@@ -19,10 +19,12 @@ function mouseMoved(){
     fill("black")
     stroke("white")
     strokeWeight(3)
-    rect(mouseX, mouseY, (200-mouseX)*2, (100-mouseY)*2)
+    rect(diameterX, diameterY, (200-mouseX)*2, (100-mouseY)*2)
+
+
 
     textAlign(LEFT);
     const area = Math.round(diameterX / 2 * diameterY / 2 * Math.PI);
-    text(`Area: ${area}`, 5, height - 10);
+    text(`area: ${area}`, 5, height - 10);
 
 }
