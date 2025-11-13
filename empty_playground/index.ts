@@ -1,32 +1,23 @@
 function setup() {
-    createCanvas(1000, 1000)
+    createCanvas(500, 500)
     background("black")
-    stroke("green")
-    strokeWeight(3)
-    noFill()
-    angleMode(DEGREES)
+    colorMode(HSB)
 }
 
-let lastClickX: number = 0
-let lastClickY: number = 0
+let x: number = 0
+let colorHue: number = 0
 
-function mouseClicked() {
-    let a = mouseY - lastClickY
-    let b = mouseX - lastClickX
-    let c = sqrt(a * a + b * b)
-    //let cheat = dist(mouseX, mouseY, lastClickX, lastclickY)
-    let diameter = 2 * c
-    stroke("green")
-    circle(mouseX, mouseY, diameter)
-    stroke("lightblue")
-    //Dreieck
-    line(mouseX, mouseY, lastClickX, lastClickY)
-    line(mouseX, mouseY, lastClickX, mouseY)
-    line(lastClickX, mouseY, lastClickX, lastClickY)
-    //Arc
-    arc(lastClickX, mouseY, 100, 100, 270, 0)
-    //Punkt
-    circle(lastClickX + 15, mouseY - 15, 1)
-    lastClickX = mouseX
-    lastClickY = mouseY
+function draw() {
+    background("lightblue")
+    strokeWeight(2)
+    stroke("black")
+    fill(colorHue, 100, 100)
+    colorHue = (colorHue + 1) % 360
+    rect(x, x, 100, 50)
+    fill(colorHue, 100, 100)
+    circle(x, x + 50, 50)
+    circle(x + 100, x + 50, 50)
+    triangle(x,x,x+10,x+10,x-50,x)
+    x = x % 500
+    x = x + 1
 }
