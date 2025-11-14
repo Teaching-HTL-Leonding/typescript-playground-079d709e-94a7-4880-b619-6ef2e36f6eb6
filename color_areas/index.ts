@@ -1,7 +1,7 @@
 const textAreaHeight: number = 50
 
 function setup() {
-    createCanvas(400, 200);
+    createCanvas(500, 300);
     background("black");
     noStroke();
 
@@ -19,11 +19,24 @@ function setup() {
 }
 
 function mouseClicked(){
+    fill("black")
+    rect(0, height - 50, width, 50)
 
+    noStroke()
+    fill("white")
+    textSize(30)
+    textStyle(BOLD)
+    textAlign(CENTER, CENTER)
 
+    let message: string
 
+    if (mouseX < width / 3) {
+        message = "Red"
+    } else if (mouseX < width / 3 * 2) {
+        message = "Green"
+    } else {
+        message = "Blue"
+    }
 
-
-
-
+    text(message, width / 2, height - textAreaHeight / 2)
 }
