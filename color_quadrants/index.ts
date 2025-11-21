@@ -45,10 +45,12 @@ function mouseClicked() {
             message = "blue"
         }
     } else {
-        if (mouseX < width / 2)
+        if (mouseY < height / 2) {
+            message = "green"
+        } else {
+            message = "red"
+        }
     }
 
-
-
-
+    text(message, width / 2, height / 2)
 }
