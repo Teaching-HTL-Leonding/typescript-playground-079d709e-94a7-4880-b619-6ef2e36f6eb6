@@ -8,26 +8,26 @@ function setup() {
 
     // <<< Add your code here
     fill("yellow")
-    rect(0, 0, width / 2, height / 2 )
-    
+    rect(0, 0, width / 2, height / 2)
+
     fill("green")
-    rect(width / 2, 0, width, height / 2 )
-    
+    rect(width / 2, 0, width, height / 2)
+
     fill("red")
     rect(width / 2, height / 2, width, height)
-    
+
     fill("blue")
     rect(0, height / 2, width / 2, height)
 
     fill("black")
-    rect(width / 2 - textAreaWidth / 2, height / 2 - textAreaHeight / 2 , textAreaWidth, textAreaHeight)
+    rect(width / 2 - textAreaWidth / 2, height / 2 - textAreaHeight / 2, textAreaWidth, textAreaHeight)
 }
 
 
 
-function mouseClicked(){
+function mouseClicked() {
     fill("black")
-    rect(width / 2 - textAreaWidth / 2, height / 2 - textAreaHeight / 2 , textAreaWidth, textAreaHeight)
+    rect(width / 2 - textAreaWidth / 2, height / 2 - textAreaHeight / 2, textAreaWidth, textAreaHeight)
 
     noStroke()
     fill("white")
@@ -37,9 +37,15 @@ function mouseClicked(){
 
     let message: string
 
-    if (mouseX < height / 2){
+    if (mouseX < width / 2) {
 
-        if (mouseY < width / 2)
+        if (mouseY < height / 2) {
+            message = "yellow"
+        } else {
+            message = "blue"
+        }
+    } else {
+        if (mouseX < width / 2)
     }
 
 
