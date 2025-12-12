@@ -12,11 +12,12 @@ function mouseMoved() {
 
   let a = 25
   while (a < (SIZE)) {
-      stroke("lime")
+    stroke("lime")
     line(a, MARGIN, mouseX, mouseY)
-    line(a, MARGIN, mouseX, mouseY)
+    line(a, SIZE - 25, mouseX, mouseY)
     stroke("yellow")
-    line(SIZE - MARGIN, a + 25, mouseX, mouseY)
+    line(SIZE - MARGIN, a, mouseX, mouseY)
+    line(MARGIN, a, mouseX, mouseY)
     a += 25
   }
 }
