@@ -1,7 +1,8 @@
 function setup() {
     const SIZE = 400; // Canvas size (square)
     const GRID = 25; // Grid line distance
-    let GELB = 50
+    let gelb = 50
+    let rot = 25
 
     createCanvas(SIZE, SIZE);
     background("black");
@@ -27,21 +28,11 @@ function setup() {
 
     // Draw left part of the lines
     stroke("yellow");
-    
-    let a = 50
-    while (GELB < (GRID * 16)){
-        line(GRID, a, GELB, a)
-        a += GRID 
-        GELB += 25
-    }
 
-
-    // Draw right part of the lines
-    stroke("red");
-    let b = 50
-    while (GELB < (GRID * 16)){
-        line(GRID, b, GELB, b)
-        a += GRID 
-        GELB += 25
+    for (let a = 50, b = 25; gelb < (GRID * 16) && rot < (GRID * 16); a += GRID, gelb += 25, b += GRID, rot += 25) {
+        line(GRID, a, gelb, a)
+        stroke("red")
+        line(SIZE - 25, b, rot, b)
     }
 }
+
