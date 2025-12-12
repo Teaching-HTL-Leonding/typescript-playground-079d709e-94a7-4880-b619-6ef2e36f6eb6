@@ -9,12 +9,14 @@ function setup() {
 function mouseMoved() {
   background("black");
   strokeWeight(2);
-  stroke("lime")
 
   let a = 25
-  while (a < (SIZE - MARGIN)) {
+  while (a < (SIZE)) {
+      stroke("lime")
     line(a, MARGIN, mouseX, mouseY)
-    line(SIZE - MARGIN, a, mouseX, mouseY)
+    line(a, MARGIN, mouseX, mouseY)
+    stroke("yellow")
+    line(SIZE - MARGIN, a + 25, mouseX, mouseY)
     a += 25
   }
 }
