@@ -6,13 +6,14 @@ const RAND = SIZE - MARGIN
 function setup() {
   createCanvas(SIZE, SIZE);
   background("black");
+  colorMode(HSB)
 
   strokeWeight(1);
-  stroke("lime");
 
   for (let b = MARGIN; b < SIZE; b += MARGIN) {
-    for (let a = MARGIN; a < SIZE; a += MARGIN) {
-      line(MARGIN, b, RAND, a)
+    for (let a = MARGIN, color = 0; a < SIZE; a += MARGIN, color += 60) {
+      stroke(color, 100, 100)
+      line(MARGIN, a, RAND, b)
     }
   }
 }
