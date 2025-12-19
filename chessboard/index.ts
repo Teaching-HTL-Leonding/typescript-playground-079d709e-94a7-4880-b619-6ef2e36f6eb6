@@ -24,7 +24,7 @@ function setup() {
             } else {
                 fill("white")
             }
-            rect(a * SQUARE_SIZE, (b * 2) * SQUARE_SIZE + SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE)
+            rect(a * SQUARE_SIZE, (b * 2) * SQUARE_SIZE + SQUARE_SIZE * 2, SQUARE_SIZE, SQUARE_SIZE)
         }
     }
 }
