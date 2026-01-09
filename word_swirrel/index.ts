@@ -5,6 +5,7 @@ const HEIGHT = 300;
 //                   vvv
 //                   vvv
 const wordToGuess = "apple";
+let color_hue = 0;
 
 function setup() {
   createCanvas(WIDTH, HEIGHT);
