@@ -24,7 +24,12 @@ function setup() {
   fill("white")
   textSize(75)
   for (let i = 0; i < scrambledWord.length; i++) {
-    text(scrambledWord[i], random[10 - 500], random[10 - 300])
+    fill(random(360), 100, 100)
+    push();
+    translate(random(20, 480), random(20, 280))
+    rotate(random(360))
+    text(scrambledWord[i], 0, 0)
+    pop()
   }
 }
 
