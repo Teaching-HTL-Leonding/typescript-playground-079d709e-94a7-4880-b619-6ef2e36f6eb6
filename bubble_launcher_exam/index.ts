@@ -1,5 +1,5 @@
 let circleX: number = 0;
-let circleY: number[] = [];
+let circleY: number[] = []
 let direction: number = 1;
 
 const SPEED: number = 2;
@@ -20,23 +20,16 @@ function draw() {
     fill('yellow');
     stroke('gold');
 
-    circleY.push(random(10, 290))
+    for (let i = 0; i < circleY.length; i++) {
 
-    circle(circleX, circleY, DIAM);
+        circle(circleX, circleY[i], DIAM);
 
-    circleX += SPEED * direction;
-    if (circleX - RADI < 0 || circleX + RADI > width) {
-        direction *= -1;
-        circleX = max(RADI, min(width - RADI, circleX));
-    }
-    if (mouseClicked) {
-        circle(circleX, circleY, DIAM);
         circleX += SPEED * direction
+
         if (circleX - RADI < 0 || circleX + RADI > width) {
             direction *= -1;
             circleX = max(RADI, min(width - RADI, circleX));
         }
-        circleY = random(10, 290)
     }
 }
 
