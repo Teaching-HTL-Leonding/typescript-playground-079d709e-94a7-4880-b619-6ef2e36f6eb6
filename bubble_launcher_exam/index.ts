@@ -1,6 +1,6 @@
-let circleX: number = 0;
+let circleX: number[] = []
 let circleY: number[] = []
-let direction: number = 1;
+let direction: number[] = []
 
 const SPEED: number = 2;
 const RADI: number = 10;
@@ -22,16 +22,20 @@ function draw() {
 
     for (let i = 0; i < circleY.length; i++) {
 
-        circle(circleX, circleY[i], DIAM);
+        circle(circleX[i], circleY[i], DIAM);
 
-        circleX += SPEED * direction
-
-        if (circleX - RADI < 0 || circleX + RADI > width) {
-            direction *= -1;
-            circleX = max(RADI, min(width - RADI, circleX));
+        circleX[i] += SPEED * direction[i]
+        if (circleX[i] - RADI < 0 || circleX[i] + RADI > width) {
+            direction[i] *= -1;
+            circleX[i] = max(RADI, min(width - RADI, circleX[i]));
         }
     }
+
+    circle(10, mouseY, DIAM)
 }
 
 function mouseClicked() {
+    circleY.push(mouseY)
+    circleX.push(10)
+    direction.push(SPEED)
 }
