@@ -30,12 +30,15 @@ function draw() {
             circleX[i] = max(RADI, min(width - RADI, circleX[i]));
         }
     }
-
-    circle(10, mouseY, DIAM)
+    if (mouseY < 290) {
+        circle(10, mouseY, DIAM)
+    }
 }
 
 function mouseClicked() {
-    circleY.push(mouseY)
-    circleX.push(10)
-    direction.push(SPEED)
+    if (mouseY < 290) {
+        circleY.push(mouseY)
+        circleX.push(10)
+        direction.push(SPEED)
+    }
 }
