@@ -21,24 +21,30 @@ const COLOR_FILLED = "steelblue"
 let randomNumber: number;
 
 function drawLine(randomNumber: number): void {
+    console.log(randomNumber)
     fill(COLOR_FILLED)
     strokeWeight(3)
     stroke(COLOR_FILLED)
-    if (randomNumber = 1) {
-        line(MARGIN + COL_GAP  / 2, TITLE_HEIGHT, MARGIN + COL_GAP / 2, TITLE_HEIGHT+  GROUP_H)
-    } else if (randomNumber = 2) {
-        line(MARGIN + COL_GAP / 2, TITLE_HEIGHT, MARGIN + COL_GAP / 2, GROUP_H)
-        line(MARGIN + COL_GAP / 2 + COL_GAP, TITLE_HEIGHT, MARGIN + COL_GAP / 2 + COL_GAP, GROUP_H)
-    } else if (randomNumber = 3) {
-        line(MARGIN + COL_GAP / 2, TITLE_HEIGHT, MARGIN + COL_GAP / 2, GROUP_H)
-        line(MARGIN + COL_GAP / 2 + COL_GAP, TITLE_HEIGHT, MARGIN + COL_GAP / 2 + COL_GAP , GROUP_H)
-        line(MARGIN + COL_GAP / 2 + COL_GAP * 2, TITLE_HEIGHT, MARGIN + COL_GAP / 2 + COL_GAP * 2, GROUP_H)
-    } else if (randomNumber = 4) {
-        line(MARGIN + COL_GAP / 2, TITLE_HEIGHT, MARGIN + COL_GAP / 2, GROUP_H)
-        line(MARGIN + COL_GAP / 2 + COL_GAP, TITLE_HEIGHT, MARGIN + COL_GAP / 2 + COL_GAP, GROUP_H)
-    } else if (randomNumber = 5) {
-        line(MARGIN + COL_GAP / 2, TITLE_HEIGHT, MARGIN + COL_GAP / 2, GROUP_H)
-        line(MARGIN + COL_GAP / 2 + COL_GAP, TITLE_HEIGHT, MARGIN + COL_GAP / 2 + COL_GAP, GROUP_H)
+    if (randomNumber === 1) {
+        line(MARGIN + COL_GAP / 2, TITLE_HEIGHT, MARGIN + COL_GAP / 2, TITLE_HEIGHT + GROUP_H * 3)
+    } else if (randomNumber === 2) {
+        line(MARGIN + COL_GAP / 2, TITLE_HEIGHT, MARGIN + COL_GAP / 2, TITLE_HEIGHT + GROUP_H * 3)
+        line(MARGIN + COL_GAP / 2 + COL_GAP, TITLE_HEIGHT, MARGIN + COL_GAP / 2 + COL_GAP, TITLE_HEIGHT + GROUP_H * 3)
+    } else if (randomNumber === 3) {
+        line(MARGIN + COL_GAP / 2, TITLE_HEIGHT, MARGIN + COL_GAP / 2, TITLE_HEIGHT + GROUP_H * 3)
+        line(MARGIN + COL_GAP / 2 + COL_GAP, TITLE_HEIGHT, MARGIN + COL_GAP / 2 + COL_GAP, TITLE_HEIGHT + GROUP_H * 3)
+        line(MARGIN + COL_GAP / 2 + COL_GAP * 2, TITLE_HEIGHT, MARGIN + COL_GAP / 2 + COL_GAP * 2, TITLE_HEIGHT + GROUP_H * 3)
+    } else if (randomNumber === 4) {
+        line(MARGIN + COL_GAP / 2, TITLE_HEIGHT, MARGIN + COL_GAP / 2, TITLE_HEIGHT + GROUP_H * 3)
+        line(MARGIN + COL_GAP / 2 + COL_GAP, TITLE_HEIGHT, MARGIN + COL_GAP / 2 + COL_GAP, TITLE_HEIGHT + GROUP_H * 3)
+        line(MARGIN + COL_GAP / 2 + COL_GAP * 2, TITLE_HEIGHT, MARGIN + COL_GAP / 2 + COL_GAP * 2, TITLE_HEIGHT + GROUP_H * 3)
+        line(MARGIN + COL_GAP / 2 + COL_GAP * 3, TITLE_HEIGHT, MARGIN + COL_GAP / 2 + COL_GAP * 3, TITLE_HEIGHT + GROUP_H * 3)
+    } else if (randomNumber === 5) {
+        line(MARGIN + COL_GAP / 2, TITLE_HEIGHT, MARGIN + COL_GAP / 2, TITLE_HEIGHT + GROUP_H * 3)
+        line(MARGIN + COL_GAP / 2 + COL_GAP, TITLE_HEIGHT, MARGIN + COL_GAP / 2 + COL_GAP, TITLE_HEIGHT + GROUP_H * 3)
+        line(MARGIN + COL_GAP / 2 + COL_GAP * 2, TITLE_HEIGHT, MARGIN + COL_GAP / 2 + COL_GAP * 2, TITLE_HEIGHT + GROUP_H * 3)
+        line(MARGIN + COL_GAP / 2 + COL_GAP * 3, TITLE_HEIGHT, MARGIN + COL_GAP / 2 + COL_GAP * 3, TITLE_HEIGHT + GROUP_H * 3)
+        line(MARGIN + COL_GAP / 2 - COL_GAP, GROUP_H * 4, MARGIN + COL_GAP / 2 + COL_GAP * 4, TITLE_HEIGHT)
     }
 }
 
@@ -51,16 +57,16 @@ function setup(): void {
 
     background("white");
 
+    text(randomNumber, width / 2, TITLE_HEIGHT)
 
-    translate(MARGIN + COL_GAP / 2 , TITLE_HEIGHT + COL_GAP / 2);
-    for (let row = 0; row < ROWS; row++) {
+    translate(MARGIN + COL_GAP / 2, TITLE_HEIGHT + COL_GAP / 2);
+    for (let row = 0; row < 1; row++) {
         drawLine(randomNumber)
         push();
         for (let col = 0; col < GROUPS_PER_ROW; col++) {
-            translate(COL_GAP, TITLE_HEIGHT);
+            translate(0, 0);
         }
         pop();
         translate(0, COL_GAP);
     }
-
 }
