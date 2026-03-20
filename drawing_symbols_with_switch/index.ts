@@ -23,21 +23,32 @@ function setup() {
   // 5: Heart emoji ❤️
   // 6: Lucky charm emoji 🍀
 
-fill("white")
+  fill("white")
 
-  if(symbol === 1){
-    rect(centerX- 20, centerY - 20, 40, 40)
-  } else if (symbol === 2){
-    circle(centerX, centerY, 40)
-  } else if (symbol === 3){
-    triangle(centerX, centerY - 20, centerX - 20, centerY + 20, centerX+ 20, centerY + 20)
-  } else if (symbol === 4){
-    text("⭐")
-  } else if (symbol === 5){
-    
-  } else if (symbol === 6){
-    
-  } else if (symbol === 7){
-    
+  switch (symbol) {
+    case 1:
+      rect(centerX - 40, centerY - 40, 80, 80)
+      break
+    case 2:
+      circle(centerX, centerY, size)
+      break
+    case 3:
+      triangle(centerX, centerY - 40, centerX - 40, centerY + 40, centerX + 40, centerY + 40)
+      break
+    case 4:
+      textAlign(CENTER, CENTER)
+      textSize(size)
+      text("⭐", centerX, centerY)
+      break
+    case 5:
+      textAlign(CENTER, CENTER)
+      textSize(size)
+      text("❤️", centerX, centerY)
+      break
+    case 6:
+      textAlign(CENTER, CENTER)
+      textSize(size)
+      text("🍀", centerX, centerY)
+      break
   }
 }
