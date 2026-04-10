@@ -24,21 +24,38 @@ function setup() {
 }
 function drawHoneycomb() {
     for (let i = 0; i < 7; i++) {
-        push()
-        translate(10, 10);
-        push()
-        for (let i = 0; i < 5; i++) {
-            drawHexagon()
-            translate(90, 0)
+        if (i < 6) {
+            push()
+            translate(10, 10);
+            push()
+            drawLine1()
+            pop()
+            translate(45, 25)
+            drawLine2()
+            pop()
+            translate(0, 50)
+        } else if (i = 7) {
+            push()
+            translate(10, 10);
+            push()
+            drawLine1()
+            pop()
+            pop()
+            translate(0, 50)
         }
-        pop()
-        translate(45, 25)
-        for (let i = 0; i < 4; i++) {
-                drawHexagon()
-                translate(90, 0)
-        }
-        pop()
-        translate(0, 50)
+    }
+}
+
+function drawLine1() {
+    for (let i = 0; i < 5; i++) {
+        drawHexagon()
+        translate(90, 0)
+    }
+}
+function drawLine2() {
+    for (let i = 0; i < 4; i++) {
+        drawHexagon()
+        translate(90, 0)
     }
 }
 
